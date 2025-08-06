@@ -26,7 +26,7 @@ const CryptoContextProvider = (props) => {
       options
     )
       .then((res) => res.json())
-      // .then((res) => console.log(res))
+
       .then((res) => setCoin(res))
       .catch((err) => console.error(err));
   };
@@ -34,8 +34,10 @@ const CryptoContextProvider = (props) => {
     fetchData();
   }, [currency]);
   const Context = {
-   coin,currency,setCurrency
- }
+    coin,
+    currency,
+    setCurrency,
+  };
   return (
     <CryptoContext.Provider value={Context}>
       {props.children}

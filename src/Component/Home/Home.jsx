@@ -5,7 +5,6 @@ import { CryptoContext } from "../Context/Context";
 import { Link } from "react-router-dom";
 const Home = () => {
   const { coin, currency } = useContext(CryptoContext);
-  
 
   return (
     <div>
@@ -21,8 +20,8 @@ const Home = () => {
           <div className="slide_container">
             <div className="slide_track">
               {coin.map((data) => (
-                <div key={data.id} className="slide">
-                  <Link to={`/search/${data.id}`}>
+                <div key={data.id} className="slide ">
+                  <Link to={`/chart/${data.id}`}>
                     <div className="coinName">
                       <img src={data.image} alt="" />
                       <h2>{data.name}</h2>
@@ -43,10 +42,10 @@ const Home = () => {
                   </Link>
                 </div>
               ))}
-              
+
               {coin.map((data) => (
                 <div key={data.id + "-copy"} className="slide">
-                  <Link to={`/search/${data.id}`}>
+                  <Link to={`/chart/${data.id}`}>
                     <div className="coinName">
                       <img src={data.image} alt="" />
                       <h2>{data.name}</h2>
@@ -85,7 +84,7 @@ const Home = () => {
           {coin.slice(0, 20).map((data) => (
             <div key={data.id} className="table">
               <h2>{data.market_cap_rank}</h2>
-              <Link to={`/search/${data.id}`}>
+              <Link to={`/chart/${data.id}`}>
                 <div className="coinName">
                   <img src={data.image} alt="" />
                   <h2>{data.name}</h2>
