@@ -29,12 +29,6 @@ It allows users to search for cryptocurrencies, view real-time market data, and 
 
 ---
 
-## 📸 Screenshots
-| Home Page | Search Page |
-|-----------|-------------|
-| ![Home](screenshots/home.png) | ![Search](screenshots/search.png) |
-
----
 
 ## ⚙️ Installation & Setup
 1. **Clone the repository**
